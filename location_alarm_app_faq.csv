@@ -1,0 +1,32 @@
+Question,Answer
+What is the main purpose of this app?,"The app allows users to set a destination, track their location, and send automated alerts to selected contacts via WhatsApp."
+How does the location tracking work?,The app uses Google Maps API and Expo's location services to track the user's real-time location.
+How can a user set a destination?,The user can search for a place using the Google Places Autocomplete integrated in the app and select it as a destination.
+What happens when the user gets close to the destination?,"If the distance to the destination becomes less than 100 km, an alarm sound is triggered automatically."
+Which sound is used for the alarm?,The alarm sound is a local audio file stored in the app's assets and played using Expo's Audio API.
+How are contacts notified?,The app uses the WhatsApp API to send real-time messages to the user’s selected contacts.
+Is internet connection required for this app?,"Yes, the app requires internet access for map loading, location tracking, and sending WhatsApp alerts."
+Can the app show route distance and time?,"Yes, once both source and destination are selected, it shows the estimated distance and travel duration."
+Which technology is used for the frontend?,The frontend is developed using React Native for cross-platform mobile compatibility.
+What backend service is used?,The app uses Firebase for real-time syncing and possibly for user authentication and data storage.
+How does the app ensure real-time location updates?,It uses `expo-location` and Firebase (or similar) for continuous tracking and updates.
+Can users change the destination once set?,"Yes, users can search and select a new destination anytime using the search bar."
+What platforms is the app available on?,"The app is built using React Native, so it can run on both Android and iOS devices."
+Is the user location shown on the map?,"Yes, the map displays the user's current location with a marker labeled 'You are here'."
+What happens after the user reaches the destination?,The app expects a pickup or safety confirmation either from the user or their contact.
+Does the app support background tracking?,"Currently, the app tracks location while in use. Background tracking may require additional permissions and implementation."
+What if location permission is denied?,"If permission is denied, the app won’t function properly and will prompt the user to enable location access."
+Can the app send alerts without user interaction?,"Yes, alerts are automated once the destination is set and the app is running."
+How is the map adjusted after selecting a destination?,The app automatically zooms and fits both the user location and destination within view.
+What happens on app launch?,"The app requests location permission, fetches current location, and hides the splash screen after loading."
+Which map service is used?,Google Maps is used for rendering maps and directions.
+Is user authentication required?,"Not currently, but it can be added via Firebase Authentication for secure access."
+How are directions drawn?,The app uses `react-native-maps-directions` to draw routes between user location and destination.
+What does the alarm signify?,"The alarm notifies the user when they are nearing the destination, acting as a proximity alert."
+Can multiple destinations be set?,The current version supports one destination at a time. Multiple destinations can be added in future updates.
+Does the app track contacts' locations too?,"Not yet, but the app can be extended to track selected contacts and share mutual locations."
+Is the app customizable?,"Yes, features like alarm sensitivity, contact management, and UI can be customized."
+Can the user select contacts from their phonebook?,"Future versions can include phonebook integration. Currently, contacts need to be added manually."
+Does the app drain battery quickly?,"Like any location-based app, continuous GPS usage may affect battery life. Efficient updates can minimize this."
+Can the app run offline?,Basic features require an internet connection. Offline maps and caching can be implemented optionally.
+How can this app help in safety?,"The app alerts contacts in real-time if the user is nearing or hasn't reached their destination, improving personal safety."
